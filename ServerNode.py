@@ -8,6 +8,9 @@ port_rev_store_1 = sys.argv[2]
 port_rev_store_2 = sys.argv[3]
 port_rev_send_1 = sys.argv[4]
 port_rev_send_2 = sys.argv[5]
+queue_main = None
+queue_rev_1 = None
+queue_rev_2 = None
 try:
     queue_main = open(port_main+".txt", "a")
 finally:
@@ -42,7 +45,7 @@ def get_massage():
             delete_from_rev()
             with open(port_main+".txt", 'w') as fout:
                 fout.writelines(data[1:])
-            return jsonify({"massage" : data.pop(0)})
+            return jsonify({"massage" : data.pop(0)[:-1]})
         return Response(status=404)
 
 @app.route('/getrev1', methods = ['GET'])
