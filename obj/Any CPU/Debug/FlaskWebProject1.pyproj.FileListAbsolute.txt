@@ -1,0 +1,2 @@
+D:\Programming\Programs\FlaskWebProject1\obj\Any CPU\Debug\FlaskWebProject1.pyproj.SuggestedBindingRedirects.cache
+D:\Programming\Programs\FlaskWebProject1\obj\Any CPU\Debug\FlaskWebProject1.pyproj.CoreCompileInputs.cache
