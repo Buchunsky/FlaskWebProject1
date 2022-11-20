@@ -1,5 +1,6 @@
 from datetime import datetime
 from flask import render_template, Flask, request, jsonify
+import requests
 
 app = Flask(__name__)
 
@@ -12,20 +13,11 @@ def home():
         year=datetime.now().year,
     )
 
-@app.route('/contact')
-def contact():
+@app.route('/servers')
+def servers():
     return render_template(
-        'contact.html',
-        title='Contact',
-        year=datetime.now().year,
-        message='Your contact page.'
-    )
-
-@app.route('/about')
-def about():
-    return render_template(
-        'about.html',
-        title='About',
+        'servers.html',
+        title='Servers',
         year=datetime.now().year,
         message='Your application description page.'
     )
